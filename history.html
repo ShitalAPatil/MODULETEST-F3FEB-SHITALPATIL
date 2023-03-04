@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Store App-SHITALPATIL</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Book Store App</h1>
+  </header>
+  <br><br>
+      <button type="submit" id="history-list" onclick="displaySearchHistory()" >Search History</button>
+        <br><br>
+        <button type="submit" id="clear-btn" onclick="clearSearchHistory()">Clear Search</button>
+  <script>
+function clearSearchHistory() {
+  searchHistory = [];
+  localStorage.setItem('searchHistory',JSON.stringify(searchHistory));
+  displaySearchHistory();
+}
+// Clear search history event listener
+clearBtn.addEventListener('click', clearSearchHistory);
+</script>
+<script src="script.js"></script>
+</body>
+</html>
